@@ -9,8 +9,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/entry.esm.ts"),
-      name: "SearchFrameworkTest",
-      fileName: "search-framework-test"
+      name: "SearchFrameworkVue3",
+      fileName: "search-framework-vue-3"
     },
     rollupOptions: {
       external: ["vue"],

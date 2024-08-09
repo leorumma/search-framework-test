@@ -1,7 +1,7 @@
 {
-  "name": "search-framework-test",
+  "name": "search-framework-vue-3",
   "private": false,
-  "version": "0.0.20",
+  "version": "0.0.23",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,13 +12,13 @@
     "dist",
     "src/components/"
   ],
-  "main": "./dist/search-framework-test.umd.cjs",
-  "module": "./dist/search-framework-test.js",
+  "main": "./dist/search-framework-vue-3.umd.cjs",
+  "module": "./dist/search-framework-vue-3.js",
   "exports": {
     ".": {
       "types": "./dist/src/entry.esm.d.ts",
-      "import": "./dist/search-framework-test.js",
-      "require": "./dist/search-framework-test.umd.cjs"
+      "import": "./dist/search-framework-vue-3.js",
+      "require": "./dist/search-framework-vue-3.umd.cjs"
     }
   },
   "dependencies": {

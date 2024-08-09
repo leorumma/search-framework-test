@@ -20,18 +20,18 @@ const install: Plugin<SearchFrameworkOptions> = (app: App, options?: SearchFrame
     });
 };
 
-const SearchFrameworkPlugin: Plugin<SearchFrameworkOptions> = {
+const SearchFrameworkVue3: Plugin<SearchFrameworkOptions> = {
     install
 };
 
 type NamedExports = Exclude<typeof components, 'default'>;
-type ExtendedPlugin = typeof SearchFrameworkPlugin & NamedExports;
+type ExtendedPlugin = typeof SearchFrameworkVue3 & NamedExports;
 Object.entries(components).forEach(([componentName, component]) => {
     if (componentName !== 'default') {
         const key = componentName as Exclude<keyof NamedExports, 'default'>;
-        (SearchFrameworkPlugin as ExtendedPlugin)[key] = component as Exclude<ExtendedPlugin, typeof SearchFrameworkPlugin>;
+        (SearchFrameworkVue3 as ExtendedPlugin)[key] = component as Exclude<ExtendedPlugin, typeof SearchFrameworkVue3>;
     }
 });
 
-export default SearchFrameworkPlugin;
+export default SearchFrameworkVue3;
 export * from './index';
