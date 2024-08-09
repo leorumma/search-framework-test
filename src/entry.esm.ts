@@ -35,7 +35,7 @@ interface SearchFrameworkOptions {
 }
 
 // Função de instalação executada por Vue.use()
-const install: Plugin = (app: App, options?: SearchFrameworkOptions) => {
+const install: Plugin<SearchFrameworkOptions> = (app: App, options?: SearchFrameworkOptions) => {
     if (!options) {
         app.config.globalProperties.$searchFrameworkOptions = {
             projectName: 'projectName',
@@ -50,7 +50,7 @@ const install: Plugin = (app: App, options?: SearchFrameworkOptions) => {
 };
 
 // Definindo o plugin explicitamente como um objeto com a função install
-const SearchFrameworkPlugin: Plugin = {
+const SearchFrameworkPlugin: Plugin<SearchFrameworkOptions> = {
     install
 };
 
